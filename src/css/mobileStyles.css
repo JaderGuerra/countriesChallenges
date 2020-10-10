@@ -19,6 +19,9 @@ body{
    align-items: center;
    
 }
+.navegacion__title{
+   font-size: 21px;
+}
 .fa-moon{
    margin-right: 5px;
 }
@@ -36,6 +39,7 @@ body{
    height: 130px;
    /* border: 1px solid #000000;    */
    justify-content: space-between;
+   margin-bottom: 1em;
 }
 
 .busqueda__campo{
@@ -56,10 +60,44 @@ body{
    letter-spacing: 0.5px;
 }
 .busqueda__options{
-   width: 50%;
+   width: 60%;
    border-radius: 7px;
    outline: none;
    padding: 1em ;
    border: none;   
 }
 /* BUSQUEDA */
+/* card__paises */
+
+.paises__flex{
+   margin: 0px 1em;
+}
+.paises__card{
+   background-color: var(--lightlements);
+   border: 1px solid #e0e0e0;
+   margin: 1.5em 0;
+   border-radius: 7px;
+}
+
+.paises__header{
+   width: 100%;
+   border: 1px solid #000000;
+}
+.paises__body{
+   padding: 1.5em;
+}
+.paises__name{
+   text-transform: capitalize;
+   font-size: 19px;
+   font-weight: 800;
+   margin-top: 10px;
+}
+.paises__data{
+   list-style: none;
+   font-weight: 600;
+   font-size: 17px;
+}
+.paises__data> small{
+   font-weight: 300;
+}
+/* card__paises */
