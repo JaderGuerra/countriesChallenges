@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import 'mobileStyles.css';
+@import 'desktopStyles.css';
 :root{
    --darkElements:rgb(43, 57, 69);
    --darkBackground: rgb(32, 44, 55);
+
    --lightTex:rgb(17, 21, 23);
    --DarkInput:rgb(133, 133, 133);
-   --lightBackground:rgb(247, 247, 247);
+   
+   --lightBackground:rgb(245, 245, 245);
    --lightlements:rgb(255, 255, 255);
 }
 

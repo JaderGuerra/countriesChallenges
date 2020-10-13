@@ -16,8 +16,7 @@ body{
 .navegacion__flex{
    display: flex;
    justify-content: space-between;
-   align-items: center;
-   
+   align-items: center;   
 }
 .navegacion__title{
    font-size: 21px;
@@ -29,6 +28,7 @@ body{
    border: none;
    background-color: inherit;
    font-weight: 600;
+   outline: none;
    /* cursor: pointer; EN PC */
 }
 /* navegacion */
@@ -71,17 +71,27 @@ body{
 
 .paises__flex{
    margin: 0px 1em;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
 }
 .paises__card{
    background-color: var(--lightlements);
-   border: 1px solid #e0e0e0;
    margin: 1.5em 0;
    border-radius: 7px;
+   max-width: 301px;
+   
 }
+
 
 .paises__header{
    width: 100%;
-   border: 1px solid #000000;
+}
+
+.paises__header > img{
+   border-radius: 7px 7px 0px 0px;
+   width: 100%;
+   
 }
 .paises__body{
    padding: 1.5em;
@@ -101,3 +111,16 @@ body{
    font-weight: 300;
 }
 /* card__paises */
+
+
+
+
+
+.darkBackGround{
+   background-color: var(--darkBackground);
+}
+.dark{
+   background-color: var(--darkElements);
+   color: var(--lightlements);
+   
+}
