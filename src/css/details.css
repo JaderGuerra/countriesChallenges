@@ -1,0 +1,59 @@
+
+.back{
+   margin-bottom: 1.5em;
+}
+.back__btn{
+   background-color: var(--lightlements);
+   color: var(--lightTex);
+   padding: 10px 25px;
+   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+   border: none;
+   border-radius: 5px;
+   text-decoration: none;
+}
+.padding{
+   margin-right: 8px;
+}
+/* papa */
+.details__card{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.details__img{
+   width: 100%;
+   max-width: 390px;
+}
+.details__body{
+   display: flex;
+   flex-direction: column;
+}
+.details__datas{
+   margin-bottom: 1.5em;
+   line-height: 30px;
+}
+.details__datos{
+   line-height: 30px;
+
+}
+.details__li{
+   list-style: none;
+   font-weight: 600;
+}
+.details__li > small{
+   font-weight: 300;
+}
+
+.details__btns{
+   margin-bottom: 1.5em;
+}
+.details__btnPaises{
+   background-color: var(--lightlements);
+   color: var(--lightTex);
+   padding: 8px 25px;
+   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+   border: none;
+   border-radius: 5px;
+   text-decoration: none;
+   text-transform: capitalize;
+}

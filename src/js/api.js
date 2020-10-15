@@ -7,8 +7,8 @@ export class Api {
       return data;
    }
 
-   async paisesRegion(region) {
-      const url = await fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+   async paisDetails(pais) {
+      const url = await fetch(`https://restcountries.eu/rest/v2/name/${pais}`)
       const data = await url.json()
       return data;
    }

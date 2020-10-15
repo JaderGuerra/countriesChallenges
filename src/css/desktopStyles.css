@@ -21,4 +21,67 @@
    .navegacion__button{
       cursor: pointer;
    }
+
+
+   /* details */
+    .details__header{
+      width: 40%;     
+   }
+
+   .details__card{
+      flex-direction: row;          
+   }
+
+
+
+   .details__body{
+      width: 57%;
+      display: grid;
+      grid-template-areas: 'datas datos'
+                           'btns btns';
+   }
+   .details__datas{
+      grid-area: datas;
+      margin-right: 9px;
+      margin-bottom: 0px;
+   }
+   .details__datos{
+      grid-area: datos;
+      padding-top: 69px;
+   }
+   .details__btns{
+      display: grid;
+      grid-area:btns;
+      grid-template-areas: 'tituloBtns btn1 btn2 btn3';
+   }
+
+   .datails__tituloBtns{
+      margin-top: 12px;
+      grid-area: tituloBtns;
+   } 
+   .details__btn1{
+      grid-area: btn1;
+   }
+   .details__btn2{
+      grid-area: btn2;
+   }
+   .details__btn3{
+      grid-area: btn3;
+   }
+   .details__btnPaises{
+      height: 35px;
+      margin: 0px 5px;
+      padding: 0px 10px;
+   }
+   
+
+
+
+   /* .item1 {
+  grid-area: myArea;
+}
+.grid-container {
+  
+} */
+   /* details */
 }
