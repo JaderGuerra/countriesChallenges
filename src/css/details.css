@@ -16,6 +16,7 @@
 }
 /* papa */
 .details__card{
+   background-color: transparent !important;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -23,6 +24,7 @@
 .details__img{
    width: 100%;
    max-width: 390px;
+   border-radius: 3px;
 }
 .details__body{
    display: flex;

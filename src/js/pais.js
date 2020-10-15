@@ -19,7 +19,7 @@ api.paisDetails(params).then((resp) => {
                   <img class='details__img' loading="lazy" src="${paises.flag}" alt="">
                </div>
 
-               <div class="details__body">
+               <div class="details__body ">
 
                   <div class="details__datas">               
                      <h3 class="details__name">${paises.name}</h3>
