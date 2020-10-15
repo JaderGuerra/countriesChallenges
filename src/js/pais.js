@@ -10,6 +10,7 @@ const api = new Api()
 
 let html = ''
 api.paisDetails(params).then((resp) => {
+
    resp.forEach(paises => {
 
       html = `
@@ -36,20 +37,16 @@ api.paisDetails(params).then((resp) => {
                      <li class="details__li">Languages: <small>${paises.languages[0].name} </small></li>
                   </div>    
                   <div class='details__btns'>
-                     <h4 class="datails__tituloBtns">Border Countries:</h4>
-                     <button class="details__btnPaises btn1">paises</button>
-                     <button class="details__btnPaises btn2">paises</button>
-                     <button class="details__btnPaises btn3">paises</button>
-                  </div>    
-
-               </div>  
-            </div>
-                `;
+                     <h4 class="datails__tituloBtns">Border Countries:</h4>          
+                        
+                        <button class="details__btnPaises btn1">${paises.borders[0]}</button>
+                        <button class="details__btnPaises btn2">${paises.borders[1]}</button>
+                        <button class="details__btnPaises btn3">${paises.borders[2]}</button>        
+                        
+                  </div >    
+               </div >  
+            </div >
+         `;
       detalles.innerHTML += html
-
    });
-
-
-
-
 })

@@ -20,8 +20,13 @@ export class Api {
                return pais
             }
          });
-
       })
+   }
+
+   async paisesRegion(region) {
+      const url = await fetch(`https://restcountries.eu/rest/v2/region/${region}`);
+      const dataRegion = await url.json()
+      return dataRegion
    }
 }
 

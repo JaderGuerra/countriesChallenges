@@ -1,11 +1,10 @@
 import { Api } from './api.js';
-import './mode.js'
-const paisesSelect = document.getElementById('paisesSelect');
-let divPaises = document.getElementById('paises');
+import './mode.js';
 
+const paisesSelect = document.getElementById('paisesSelect');
+const divPaises = document.getElementById('paises');
 const buscar = document.getElementById('buscar');
 const boton = document.getElementById('boton');
-
 
 const api = new Api()
 
@@ -15,8 +14,32 @@ paisesSelect.addEventListener('input', async () => {
    if (regionSeleccionada === '') {
       return
    } else {
+      limpiar()
+
       let regiones = await api.paisesRegion(regionSeleccionada)
-      console.log(regiones);
+      regiones.forEach((paises, index) => {
+
+         let html = '';
+
+         if (index < 15) {
+            const verPais = paises.name.toLowerCase()
+
+            html = `
+                <a  href='pais.html?name=${verPais}' id='card' class="paises__card mode">
+                <div class="paises__header">
+                   <img class='img' loading="lazy" src="${paises.flag}" alt="">
+                </div>
+                <div class="paises__body">
+                   <h4 class="paises__name">${paises.name}</h4>
+                   <li class="paises__data">Population: <small>${paises.population}</small></li>
+                   <li class="paises__data">Region: <small>${paises.region}</small></li>
+                   <li class="paises__data">Capital: <small>${paises.capital}</small></li>
+                </div>
+             </a>
+                `;
+            divPaises.innerHTML += html
+         }
+      });
    }
 })
 
@@ -40,7 +63,7 @@ const filtrar = () => {
       filtrado.forEach((paises, index) => {
          let html = '';
 
-         if (index < 9) {
+         if (index < 15) {
             const verPais = paises.name.toLowerCase()
 
             html = `
