@@ -3,20 +3,21 @@
 @import 'mobileStyles.css';
 @import 'desktopStyles.css';
 :root{
-   --darkElements:rgb(43, 57, 69);
    --darkBackground: rgb(32, 44, 55);
+   --darkElements:rgb(43, 57, 69);
+   --DarkInput:rgb(133, 133, 133);
+   --lightlements:rgb(255, 255, 255);
    
    --lightTex:rgb(17, 21, 23);
-   --DarkInput:rgb(133, 133, 133);
    
    --lightBackground:rgb(245, 245, 245);
-   --lightlements:rgb(255, 255, 255);
 }
 
 .wrapper{
    width: 90%;
    background-color: transparent;
    margin: 0 auto;
+   max-width: 1220px;
 }
 
 

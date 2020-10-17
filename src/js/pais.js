@@ -1,5 +1,8 @@
 import { Api } from './api.js';
 import './mode.js'
+//import { themesMode } from './mode.js'
+
+//document.addEventListener('DOMContenteLoaded', () => themesMode())
 
 const query = new URLSearchParams(window.location.search)
 const params = query.get('name')
@@ -8,8 +11,9 @@ const detalles = document.getElementById('detalles');
 const api = new Api()
 
 
-let html = ''
+
 api.paisDetails(params).then((resp) => {
+   let html = ''
 
    resp.forEach(paises => {
 
@@ -20,7 +24,7 @@ api.paisDetails(params).then((resp) => {
                   <img class='details__img' loading="lazy" src="${paises.flag}" alt="">
                </div>
 
-               <div class="details__body ">
+               <div class="details__body">
 
                   <div class="details__datas">               
                      <h3 class="details__name">${paises.name}</h3>

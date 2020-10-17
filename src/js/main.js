@@ -1,5 +1,7 @@
 import { Api } from './api.js';
-import './mode.js';
+import './mode.js'
+//import { themesMode } from './mode.js'
+
 
 const paisesSelect = document.getElementById('paisesSelect');
 const divPaises = document.getElementById('paises');
@@ -18,19 +20,14 @@ paisesSelect.addEventListener('input', async () => {
 
       let regiones = await api.paisesRegion(regionSeleccionada)
       regiones.forEach((paises, index) => {
-
          mostrarPaises(paises, index)
-
       });
    }
 })
 
-window.addEventListener('load', () => filtrar())
-
 const filtrar = () => {
    limpiar()
 
-   divPaises.innerHTML = "";
    let text = buscar.value.toLowerCase();
 
    api.paisesAll().then((resp) => {
@@ -52,14 +49,14 @@ const filtrar = () => {
 
 const mostrarPaises = (paises, index) => {
    let html;
-   if (index < 15) {
+   if (index < 12) {
       const verPais = paises.name.toLowerCase()
       html = `
               <a  href='pais.html?name=${verPais}' id='card' class="paises__card mode">
               <div class="paises__header">
                  <img class='img' loading="lazy" src="${paises.flag}" alt="">
               </div>
-              <div class="paises__body">
+              <div class="paises__body ">
                  <h4 class="paises__name">${paises.name}</h4>
                  <li class="paises__data">Population: <small>${paises.population}</small></li>
                  <li class="paises__data">Region: <small>${paises.region}</small></li>
@@ -78,11 +75,13 @@ const limpiar = () => {
 };
 
 
-
-
+window.addEventListener('load', () => {
+   //filtrar()
+   //themesMode()
+})
 
 boton.addEventListener("click", filtrar);
 buscar.addEventListener("keyup", filtrar);
 
-
+filtrar()
 

@@ -13,15 +13,7 @@ export class Api {
       return data;
    }
 
-   async obtenerPaises() {
-      await this.paisesAll().then((resp) => {
-         resp.forEach((pais, index) => {
-            if (index < 7) {
-               return pais
-            }
-         });
-      })
-   }
+
 
    async paisesRegion(region) {
       const url = await fetch(`https://restcountries.eu/rest/v2/region/${region}`);
