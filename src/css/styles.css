@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import 'details.css';
-@import 'mobileStyles.css';
-@import 'desktopStyles.css';
+@import './details.css';
+@import './mobileStyles.css';
+@import './desktopStyles.css';
 :root{
    --darkBackground: rgb(32, 44, 55);
    --darkElements:rgb(43, 57, 69);
