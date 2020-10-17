@@ -1,8 +1,6 @@
 import { Api } from './api.js';
 import './mode.js'
-//import { themesMode } from './mode.js'
 
-//document.addEventListener('DOMContenteLoaded', () => themesMode())
 
 const query = new URLSearchParams(window.location.search)
 const params = query.get('name')

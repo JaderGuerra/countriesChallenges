@@ -1,5 +1,4 @@
 const modeBtn = document.getElementById('modeBtn');
-//const fondos = document.getElementsByClassName('fondo');
 const fondos = document.getElementById('fondo');
 const elements = document.getElementsByClassName('mode')
 
@@ -46,9 +45,5 @@ setTimeout(() => {
 
 }, 300);
 
-
-
-//document.addEventListener('DOMContentLoaded', () => themesMode())
-// document.addEventListener('load', () => themesMode())
 modeBtn.addEventListener('click', btnChangeMode)
 

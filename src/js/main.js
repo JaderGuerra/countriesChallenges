@@ -1,6 +1,5 @@
 import { Api } from './api.js';
 import './mode.js'
-//import { themesMode } from './mode.js'
 
 
 const paisesSelect = document.getElementById('paisesSelect');
